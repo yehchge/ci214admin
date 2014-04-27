@@ -129,8 +129,7 @@ class CI_Mysession {
      * read
      */
     function _read($session_id) {
-		//$sql = "SELECT sessdata FROM sessions WHERE sesskey = '" . $session_id . "' AND expiry > '" . date("Y-m-d H:i:s", time() ) . "' LIMIT 1";
-		$sql = "SELECT sessdata FROM sessions WHERE sesskey = '$session_id' AND expiry > ". time();
+		$sql = "SELECT sessdata FROM sessions WHERE sesskey = '" . $session_id . "' AND expiry > '" . date("Y-m-d H:i:s", time() ) . "' LIMIT 1";
 		$iRs = mysql_query($sql, $this->_link);
         $fields = @mysql_fetch_assoc($iRs);
 		
@@ -155,8 +154,8 @@ class CI_Mysession {
 						// expiry		= '" . date("Y-m-d H:i:s", time() + $this->_session_lifetime ) . "'";
 		//$iRs = mysql_query($sql, $this->_link);
 		
-		$expiry = time() + $this->_session_lifetime;
-
+		$expiry		= date("Y-m-d H:i:s", time() + $this->_session_lifetime);
+		$created	= date("Y-m-d H:i:s", time() );
 		// 判斷是否有大於目前的時間 session 值
 		$query1 = mysql_query("SELECT COUNT(sesskey) as total FROM sessions WHERE sesskey = '$session_id' AND expiry > " . time(), $this->_link);
 		$aRow1 = mysql_fetch_assoc($query1);
@@ -164,12 +163,11 @@ class CI_Mysession {
 		if ($aRow1['total'] == 0) {
 			mysql_query("DELETE FROM sessions WHERE sesskey = '$session_id'", $this->_link);
 			// 新增 使用者資訊
-			$sDate = date('Y-m-d H:i:s');
-			$qry = "INSERT INTO sessions(sesskey,expiry,sessdata,created) VALUES ('$session_id', $expiry, '$session_data', ".time().")";
+			$qry = "INSERT INTO sessions(sesskey,expiry,sessdata,created,modified) VALUES ('$session_id', '$expiry', '$session_data', '$created', '$created')";
 			$iRs = mysql_query($qry, $this->_link);
 		} else {
 			// 如果有就更新資料
-			$qry = "UPDATE sessions SET expiry = $expiry, sessdata = '$session_data' WHERE sesskey = '$session_id' AND expiry > " . time();
+			$qry = "UPDATE sessions SET modified = '$created', expiry = '$expiry', sessdata = '$session_data' WHERE sesskey = '$session_id' AND expiry > " . time();
 			$iRs = mysql_query($qry, $this->_link);
 		}
 		
