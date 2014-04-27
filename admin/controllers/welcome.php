@@ -19,7 +19,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->mysession->set('code','PHP');
+		$this->mysession->set('user_no',168);
 		$this->load->view('welcome_message');
+		echo ' -- '.$this->mysession->get('code').' -- ';
+		echo '<br>session user_no='.$this->mysession->get('user_no')."<Br>";
 	}
 }
 
