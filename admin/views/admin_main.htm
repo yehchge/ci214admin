@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>貓舍(Cat House)網站管理系統</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<!--basic styles-->
+
+		<link href="../css/bootstrap.min.css" rel="stylesheet" />
+		{*<link href="../css/bootstrap-responsive.min.css" rel="stylesheet" />*}
+		<link rel="stylesheet" href="../css/font-awesome.min.css" />
+		
+		<!-- Font -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="../css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!--page specific plugin styles-->
+
+		<!--fonts-->
+
+		<!--ace styles-->
+
+		<link rel="stylesheet" href="../css/ace.min.css" />
+		<link rel="stylesheet" href="../css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="../css/ace-skins.min.css" />
+		<link rel="stylesheet" href="../css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="../css/jquery.gritter.css" />
+
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="../css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!--inline styles if any-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>{*1.7.1*}
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+		{literal}
+			//window.jQuery || document.write("<script src='../js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		{/literal}
+		</script>
+		<!-- <![endif]-->
+
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/typeahead-bs2.min.js"></script>
+
+		<script src="../js/ace-elements.min.js"></script>
+		<script src="../js/ace.min.js"></script>
+
+		{*<script src="../js/jquery-ui-1.10.3.custom.min.js"></script>*}
+		{*<script src="../js/jquery.ui.touch-punch.min.js"></script>*}
+		{*<script src="../js/jquery.slimscroll.min.js"></script>*}
+		{*<script src="../js/jquery.easy-pie-chart.min.js"></script>*}
+		{*<script src="../js/jquery.sparkline.min.js"></script>*}
+		{*<script src="../js/flot/jquery.flot.min.js"></script>*}
+		{*<script src="../js/flot/jquery.flot.pie.min.js"></script>*}
+		{*<script src="../js/flot/jquery.flot.resize.min.js"></script>*}
+		{*<script src="../js/jquery.gritter.min.js"></script>*}
+
+		<!--ace scripts-->
+
+		<script type="text/javascript" src="../js/function_admin.js"></script>
+	</head> 
+
+	<body style>
+		{include file="./admin/top.html"}
+		<div class="main-container" id="main-container">
+			<div class="main-container-inner">
+				{include file="./admin/menu.html"}
+				<div class="main-content">
+					{$bodyTpl}
+				</div>
+			</div>
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+      	</div>
+ 	</body>
+</html>

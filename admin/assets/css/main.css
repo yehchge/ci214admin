@@ -1,0 +1,194 @@
+@charset "utf-8";
+/***********************************************************************
+ @ filename         : css/main.css
+ @ description      : 主要 css
+ @ media            : screen print
+ @ modified         : 2012/07/12
+**********************************************************************/
+
+body {
+	width:100%;
+	margin:0;
+	padding:0;
+	font-size: 12px;
+	font-family: arial,helvetica,clean,sans-serif;
+	background: url(../images/user/TW/bg.jpg);
+}
+
+div.breadcrumb {
+	height:33px;line-height:33px;padding:0 8px;background-color:#F6F6F6;
+}
+
+a, a:link, a:visited { color: darkBlue; text-decoration: none; }
+a:hover, a:active { color: darkRed; text-decoration: underline; }
+
+.index_top a:active { color:#000000; }
+.index_top a:visited { color:#000000; text-decoration: none; }
+.index_top a:link { color:#000000; text-decoration: none; }
+.index_top a:hover { color:darkRed; text-decoration:underline; }
+
+.head_top a:active { color:#d3d3d3; }
+.head_top a:visited { color:#a5a5a5; text-decoration: none; }
+.head_top a:link { color:#a5a5a5; text-decoration: none; }
+.head_top a:hover { color:lightGrey; }
+
+.head_menu a:active { color:darkBlue; text-decoration:none; }
+.head_menu a:visited { color:darkBlue; text-decoration:none; }
+.head_menu a:link { color: darkBlue; text-decoration:none; }
+.head_menu a:hover { color: darkRed; text-decoration:underline; }
+
+.menu_tab a:active { color:#9A9A9A; text-decoration:none; }
+.menu_tab a:visited { color:#9A9A9A; text-decoration:none; }
+.menu_tab a:link { color:#9A9A9A; text-decoration:none; }
+.menu_tab a:hover { color: darkRed; text-decoration:underline; }
+
+/* DoubleClick Edit CSS Begin */
+table.data tr.even td.cell {background-color: #EED;}
+table.data tr.odd td.cell {background-color: #FFE;}
+table.data tr.even td.cell:hover { background-color:#EEC; }
+table.data tr.odd td.cell:hover { background-color:#FFB; }
+td.cell-editor { background-color: #ddffdd; }
+td.cell-editor input { width: 90%; border: 0px none black; background-color: #ddffdd; }
+/* DoubleClick Edit CSS End */
+
+.bbs a:active { color:#d3d3d3; }
+.bbs a:visited { color:#333333; text-decoration: none; }
+.bbs a:link { color:#a5a5a5; text-decoration: none; }
+.bbs a:hover { color:lightGrey; }
+
+.label {font-size: 12px;color: #930;font-weight: bold;text-align: right;}
+
+.ch,.rh { background-color: #dddddd; }
+table.data tr.even { background-color:#EEE; }
+table.data tr.odd { background-color:white; }
+table.data tr.even:hover { background-color:#ffc; text-decoration:none;}
+table.data tr.odd:hover { background-color:#ffd; text-decoration:none; }
+table.data td { padding:5px;cursor:default; }
+
+table.data th.sortable a:active,
+table.data th.sortable-asc a:active,
+table.data th.sortable-desc a:active {
+	color: #333;
+	text-decoration:none;
+}
+
+table.data th.sortable a:visited,
+table.data th.sortable-asc a:visited,
+table.data th.sortable-desc a:visited {
+	cursor: pointer;
+	padding-right: 16px;
+	text-decoration:none;
+	/* background: #ddd url(/images/admin/TW/bg_sortable2.gif) right top no-repeat; */
+}
+
+table.data th.sortable a:link,
+table.data th.sortable-asc a:link,
+table.data th.sortable-desc a:link {
+	cursor: pointer;
+	padding-right: 16px;
+	text-decoration:none;
+	/* background: #ddd url(/images/admin/TW/bg_sortable2.gif) right top no-repeat; */
+}
+
+
+table.data th.sortable:hover,
+table.data th.sortable-asc:hover,
+table.data th.sortable-desc:hover {
+	color: #495885;
+	/* background-color: #D4FFFF; */
+	text-decoration:underline;
+}
+table.data th.sortable-asc {
+	/* background: #D3E0E8 url(/images/admin/TW/bg_sortable2.gif) right -40px no-repeat; */
+	color: #495885;
+	text-decoration: none;
+}
+table.data th.sortable-desc {
+	/* background: #D3E0E8 url(/images/admin/TW/bg_sortable2.gif) right -80px no-repeat; */
+	color: #495885;
+	text-decoration: none;
+}
+
+
+
+.footer a:visited { color:#333333; text-decoration: none; }
+.footer a:link { color:#a5a5a5; text-decoration: none; }
+.footer a:hover { color:#7A3371;text-decoration: underline; }
+
+/***** Pagination *****/
+.block-pagination {
+	margin: 8px 0;
+	color: #999;
+	cursor: default;
+	font-size: 8pt;
+	line-height: 250%;
+}
+.block-pagination span,
+.block-pagination a {
+	padding: 3px 6px;
+	border: 1px solid #ccc;
+	white-space: nowrap;
+	text-decoration: none;
+}
+.block-pagination .active {
+	color: white;
+	background: #427AB9;
+	border-color: #034DA2;
+	text-decoration: none;
+}
+.block-pagination a {
+	color: #034DA2;
+	background: #fff;
+	border-color: #427AB9;
+	cursor: pointer;
+	text-decoration: none;
+}
+.block-pagination a:hover {
+	color: #000;
+	background: #B8CEE6;
+	border-color: #427AB9;
+	text-decoration: none;
+}
+.block-pagination a:visited {
+	color: #034DA2;
+	text-decoration: none;
+}
+.block-pagination span.ellipsis {
+	border: none;
+	padding: 3px 2px;
+}
+
+/* msg (warnings/errors) */
+div.msg-info,
+div.msg-warn,
+div.msg-error {
+	margin: 1em 0;
+	border: 1px solid #fc0;
+	border-left-width: 5px;
+	background: #ffc url(../images/admin/TW/i/icon_alert.gif) 10px center no-repeat;
+	padding: 8px 20px 8px 40px;
+	color: #333;
+	text-align: left;
+}
+div.msg-info {
+	border-color: #B8CEE6;
+	background-color: #dce7f3;
+	background-image: url(../images/admin/TW/i/icon_info.gif);
+}
+div.msg-info p,
+div.msg-warn p,
+div.msg-error p {
+	margin: 0.5em 0;
+	line-height: 175%;
+}
+
+div.block-form {
+	padding: 1em 2em;
+	text-align: center;
+	background-color: #F3F3E1;
+	/* background-color: #EBF1DE; */
+}
+div.block-form table.form {
+	margin: 0 auto;
+	border-collapse: collapse;
+}

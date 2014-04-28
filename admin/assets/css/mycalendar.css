@@ -1,0 +1,82 @@
+
+td.eventStyle {
+	background-color:white;
+	text-align:center;
+	height:50px;
+}
+td.eventStyle img{padding:0 8px;}
+
+table.calendar {
+	width:100%;
+}
+
+table.calendar td {
+	width:80px;
+	
+}
+
+table.calendar, table.calendar th, table.calendar td {
+	border:#ccc 1px solid;
+	border-collapse:collapse;
+}
+
+.navigateYear {
+	/* background-color:green; */
+	/* color:white; */
+	text-align:center;
+	font-size:15px;
+	height:44px;
+}
+
+td.month {
+	/* background-color:gray; */
+	text-align:center;
+	font-size:23px;
+	height:30px;
+	font-weight:bold;
+}
+
+tr.daysOfTheWeek {
+	background-color:#f8f5b1;
+	text-align:center;
+	height:36px;
+	font-size:13px;
+	font-weight:bold;
+	color:#000;
+	
+}
+
+.normalDate {
+	
+	color:black;
+	text-align:center;
+	font-size:15px;
+	font-weight: bold;
+	height:28px;
+	
+}
+
+.currentDate {
+	background-color:#333;
+	color:#fff;
+	font-size:15px;
+	font-weight: bold;
+	text-align:center;
+}
+
+.currentLinkDate {
+	background-color:green;
+	color:white;
+	text-align:center;
+}
+
+.selectedDate {
+	background-color:blue;	
+	color:white;
+	text-align:center;
+}
+
+td.todayinfo {
+	background-color:#e4f4fb;
+	color: blue;
+}

@@ -1,0 +1,405 @@
+<a class="menu-toggler" id="menu-toggler" href="#">
+	<span class="menu-text"></span>
+</a>
+
+<div id="sidebar" class="sidebar">
+	<ul class="nav nav-list">
+		<li {if $smarty.server.QUERY_STRING=='' || (!$smarty.get.func && !$smarty.get.action)}class="active"{/if}>
+			<a href="./index.php">
+				<i class="icon-dashboard"></i>
+				<span class="menu-text">首頁</span>
+			</a>
+		</li>
+		
+		<li {if $smarty.get.func=='oldcat_management_admin' ||  $smarty.get.func=='oldcat_team_admin' || $smarty.get.func=='oldcat_agent_admin'}class="active open"{/if}>
+			<a href="javascript:void(0);" class="dropdown-toggle">
+				<i class="icon-edit"></i>
+				<span class="menu-text">使用者</span>
+				<b class="arrow icon-angle-down"></b>
+			</a>
+
+			<ul class="submenu">
+				<li {if $smarty.get.func=='oldcat_member_admin'}class="active"{/if}>
+					<a target="_BLANK" href="{$smarty.const._GENESIS_WWW_URL}/admin/index.php?func=user&action=list&tab=oldcat&PHPSESSID={$smarty.cookies.PHPSESSID}">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">使用者管理</span>
+					</a>
+				</li>
+				<li {if $smarty.get.func=='oldcat_member_role_admin'}class="active"{/if}>
+					<a target="_BLANK" href="{$smarty.const._GENESIS_WWW_URL}/admin/index.php?func=group&action=list&PHPSESSID={$smarty.cookies.PHPSESSID}">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">使用者角色管理</span>
+					</a>
+				</li>
+				
+				{if $userAccess.oldcat_management_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_management_admin'}class="active"{/if}>
+					<a href="./index.php?func=oldcat_management_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">體系管理</span>
+					</a>
+				</li>
+				{/if}
+	
+				{if $userAccess.oldcat_team_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_team_admin'}class="active"{/if}>
+					<a href="./index.php?func=oldcat_team_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">團隊管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_agent_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_agent_admin'}class="active"{/if}>
+					<a href="./index.php?func=oldcat_agent_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">代理商管理</span>
+					</a>
+				</li>
+				{/if}
+			</ul>
+		</li>		
+		
+		{if $userAccess.oldcat_warticle_admin.show == 1}
+		<!--
+		<li {if $smarty.get.func=='oldcat_warticle_admin' || $smarty.get.func=='oldcat_photo_admin'}class="active"{/if}>
+			<a href="index.php?func=oldcat_warticle_admin">
+				<i class="icon-picture"></i>
+				<span class="menu-text">圖文管理</span>
+			</a>
+		</li>
+		-->
+		{/if}
+		
+
+		<li {if $smarty.get.func=='oldcat_department_admin' || $smarty.get.func=='oldcat_project_admin' || $smarty.get.func=='oldcat_industry_admin' ||  $smarty.get.func=='oldcat_cus_admin' || $smarty.get.func=='oldcat_filing_admin'}class="active open"{/if}>
+			<a href="javascript:void(0);" class="dropdown-toggle">
+				<i class="icon-list-alt"></i>
+				<span class="menu-text">客戶</span>
+
+				<b class="arrow icon-angle-down"></b>
+			</a>
+
+			<ul class="submenu">
+				{if $userAccess.oldcat_department_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_department_admin'}class="active"{/if}>
+					<a href="./index.php?func=oldcat_department_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">業務單位管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{*if $userAccess.oldcat_business_admin.show == 1}
+				<li>
+					<a href="./index.php?func=oldcat_business_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">業務人員管理</span>
+					</a>
+				</li>
+				{/if*}
+				
+				{*if $userAccess.oldcat_distwork_admin.show == 1}
+				<li>
+					<a href="./index.php?func=oldcat_distwork_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">指派管理</span>
+					</a>
+				</li>
+				{/if*}
+				
+				{*if $userAccess.oldcat_statusopt_admin.show == 1}
+				<li>
+					<a href="./index.php?func=oldcat_statusopt_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">回訪選項管理</span>
+					</a>
+				</li>
+				{/if*}
+
+				{if $userAccess.oldcat_project_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_project_admin'}class="active"{/if}>
+					<a href="./index.php?func=project_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">專案名稱管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_industry_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_industry_admin'}class="active"{/if}>
+					<a href="./index.php?func=oldcat_industry_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">產業名稱管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_filing_admin.show == 1}
+				<li>
+					<a target="_BLANK" href="{$smarty.const._GENESIS_WWW_URL}/admin/index.php?func=filing&action=list&PHPSESSID={$smarty.cookies.PHPSESSID}">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">報備名單管理</span>
+					</a>
+				</li>
+				{/if}
+
+				{if $userAccess.oldcat_cus_admin.show == 1}
+				<li>
+					<a target="_BLANK" href="{$smarty.const._GENESIS_WWW_URL}/admin/index.php?func=company&action=list&PHPSESSID={$smarty.cookies.PHPSESSID}">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">公司名單管理</span>
+					</a>
+				</li>
+				{/if}
+				
+			</ul>
+		</li>
+
+		{if $userAccess.oldcat_work_admin.show == 1}
+		<li {if $smarty.get.func=='oldcat_work_admin'}class="active"{/if}>
+			<a href="./index.php?func=oldcat_work_admin">
+				<i class="icon-text-width"></i>
+				<span class="menu-text">兼職專案管理</span>
+			</a>
+		</li>
+		{/if}
+		
+		<li {if $smarty.get.func=='oldcat_indextop_admin' || $smarty.get.func=="oldcat_top10_admin" || $smarty.get.func=="oldcat_marketing_admin" || $smarty.get.func=='oldcat_article_share_admin' || $smarty.get.func=='oldcat_news_admin' || $smarty.get.func=='oldcat_media_admin' || $smarty.get.func=='oldcat_aaa_admin' || $smarty.get.func=='oldcat_event_admin' }class="active open"{/if}>
+			<a href="javascript:void(0);" class="dropdown-toggle">
+				<i class="icon-th"></i>
+				<span class="menu-text">貓舍選單內容更新</span>
+
+				<b class="arrow icon-angle-down"></b>
+			</a>
+
+			<ul class="submenu">
+				{if $userAccess.oldcat_top10_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_top10_admin'}class="active"{/if}>
+					<a href="./index.php?func=oldcat_top10_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">英雄榜管理</span>
+					</a>
+				</li>
+				{/if}
+			
+				{if $userAccess.oldcat_marketing_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_marketing_admin'}class='active'{/if}>
+					<a href="./index.php?func=oldcat_marketing_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">行銷學堂管理</span>
+					</a>
+				</li>
+				{/if}
+
+				{if $userAccess.oldcat_article_share_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_article_share_admin'}class='active'{/if}>
+					<a href="./index.php?func=oldcat_article_share_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">專文分享管理</span>
+					</a>
+				</li>
+				{/if}
+			
+				{if $userAccess.oldcat_news_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_news_admin'}class='active'{/if}>
+					<a href="./index.php?func=oldcat_news_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">公告欄管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_aaa_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_aaa_admin'}class='active'{/if}>
+					<a href="./index.php?func=oldcat_aaa_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">常見問題管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_event_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_event_admin'}class='active'{/if}>
+					<a href="./index.php?func=oldcat_event_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">活動排程管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_media_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_media_admin'}class='active'{/if}>
+					<a href="./index.php?func=oldcat_media_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">資料下載管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_indextop_admin.show == 1}
+				<li {if $smarty.get.func=="oldcat_indextop_admin"}class="active"{/if}>
+					<a href="./index.php?func=oldcat_indextop_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">個人首頁內文管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_share_admin.show == 1}
+				<li {if $smarty.get.func=='oldcat_share_admin'}class='active'{/if}>
+					<a href="./index.php?func=oldcat_share_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">分享會管理</span>
+					</a>
+				</li>
+				{/if}
+				
+			</ul>
+		</li>
+
+
+		{*<li {if $smarty.get.func=="oldcat_user_admin" || $smarty.get.func=="oldcat_user_group_admin" }class="active open"{/if}>
+			<a href="javascript:void(0);" class="dropdown-toggle">
+				
+				<i class="icon-desktop"></i>
+				<span class="menu-text">管理者</span>
+
+				<b class="arrow icon-angle-down"></b>
+			</a>
+
+			<ul class="submenu">
+				{if $userAccess.oldcat_user_admin.show == 1}
+				<li {if $smarty.get.func=="oldcat_user_admin"}class="active"{/if}>
+					<a href="./index.php?func=oldcat_user_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">後台人員管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_user_group_admin.show == 1}
+				<li {if $smarty.get.func=="oldcat_user_group_admin"}class="active"{/if}>
+					<a href="./index.php?func=oldcat_user_group_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">使用者群組管理</span>
+					</a>
+				</li>
+				{/if}
+	
+			</ul>
+		</li>*}
+
+		<li {if $smarty.get.func=="oldcat_flickr_admin" || $smarty.get.func=="oldcat_address_admin" ||  $smarty.get.func=="oldcat_log_admin" ||  $smarty.get.func=="oldcat_memlog_admin" }class="active open"{/if}>
+			<a href="javascript:void(0);" class="dropdown-toggle">
+				
+				<i class="icon-list"></i>
+				<span class="menu-text">雜項</span>
+
+				<b class="arrow icon-angle-down"></b>
+			</a>
+
+			<ul class="submenu">
+				{if $userAccess.oldcat_flickr_admin.show == 1}
+				<!--
+				<li {if $smarty.get.func=="oldcat_flickr_admin"}class="active"{/if}>
+					<a href="./index.php?func=oldcat_flickr_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">公用Flickr帳號管理</span>
+					</a>
+				</li>
+				-->
+				{/if}
+
+				{if $userAccess.oldcat_address_admin.show == 1}
+				<li {if $smarty.get.func=="oldcat_address_admin"}class="active"{/if}>
+					<a href="./index.php?func=oldcat_address_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">郵遞區號管理</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_log_admin.show == 1}
+				<li {if $smarty.get.func=="oldcat_log_admin"}class="active"{/if}>
+					<a href="./index.php?func=oldcat_log_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">Log 紀錄</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_memlog_admin.show == 1}
+				<li {if $smarty.get.func=="oldcat_memlog_admin"}class="active"{/if}>
+					<a href="./index.php?func=oldcat_memlog_admin">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">會員 Log 紀錄</span>
+					</a>
+				</li>
+				{/if}
+			</ul>
+		</li>
+		
+		<li {if $smarty.get.func=="oldcat_report"}class="active open"{/if}>
+			<a href="javascript:void(0);" class="dropdown-toggle">
+				
+				<i class="icon-list"></i>
+				<span class="menu-text">報表</span>
+
+				<b class="arrow icon-angle-down"></b>
+			</a>
+			
+			<ul class="submenu">
+				{if $userAccess.oldcat_report.distribute_log == 1}
+				<li {if $smarty.get.func=="oldcat_report" && $smarty.get.action=="distribute_log" }class="active"{/if}>
+					<a href="./index.php?func=oldcat_report&action=distribute_log">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">拜訪紀錄</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_report.filing == 1}
+				<li {if $smarty.get.func=="oldcat_report" && $smarty.get.action=="filing" }class="active"{/if}>
+					<a href="./index.php?func=oldcat_report&action=filing">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">業務開發數量統計</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_report.no_sale_co == 1}
+				<li {if $smarty.get.func=="oldcat_report" && $smarty.get.action=="no_sale_co" }class="active"{/if}>
+					<a href="./index.php?func=oldcat_report&action=no_sale_co">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">待派發公司</span>
+					</a>
+				</li>
+				{/if}
+				
+				{if $userAccess.oldcat_report.develop_co == 1}
+				<li {if $smarty.get.func=="oldcat_report" && $smarty.get.action=="develop_co" }class="active"{/if}>
+					<a href="./index.php?func=oldcat_report&action=develop_co">
+						<i class="icon-double-angle-right"></i>
+						<span class="menu-text">開發中公司</span>
+					</a>
+				</li>
+				{/if}
+				
+			</ul>
+		</li>
+		
+		
+		
+	</ul><!--/.nav-list-->
+
+	<div class="sidebar-collapse" id="sidebar-collapse">
+		<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+	</div>
+	<script type="text/javascript">
+		{literal}
+		try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+		{/literal}
+	</script>
+</div>

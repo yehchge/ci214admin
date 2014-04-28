@@ -22,23 +22,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
   'nocache_hash' => '8740535e2a6694b019-99076952',
-  'variables' => 
-  array (
-    'SCRIPT_NAME' => 0,
-    'Name' => 1,
-    'FirstName' => 0,
-    'LastName' => 0,
-    'contacts' => 0,
-    'option_values' => 0,
-    'option_selected' => 0,
-    'option_output' => 0,
-  ),
-  'has_nocache_code' => true,
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_535e2a66da7f62_70990255',
+  'unifunc' => 'content_535e2bfa533b47_03249639',
+  'has_nocache_code' => true,
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_535e2a66da7f62_70990255')) {function content_535e2a66da7f62_70990255($_smarty_tpl) {?><HTML>
+<?php if ($_valid && !is_callable('content_535e2bfa533b47_03249639')) {function content_535e2bfa533b47_03249639($_smarty_tpl) {?><HTML>
 <HEAD>
 <TITLE>foo - <?php echo $_smarty_tpl->tpl_vars['Name']->value;?>
 </TITLE>
@@ -52,7 +41,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 Title: 
 
-The current date and time is 2014-04-28 12:16:06
+The current date and time is 2014-04-28 12:22:50
 
 The value of global assigned variable $SCRIPT_NAME is /ci214admin/admin/index.php
 
@@ -190,13 +179,13 @@ This is an example of the html_select_time function:
 <option value="13">13</option>
 <option value="14">14</option>
 <option value="15">15</option>
-<option value="16" selected="selected">16</option>
+<option value="16">16</option>
 <option value="17">17</option>
 <option value="18">18</option>
 <option value="19">19</option>
 <option value="20">20</option>
 <option value="21">21</option>
-<option value="22">22</option>
+<option value="22" selected="selected">22</option>
 <option value="23">23</option>
 <option value="24">24</option>
 <option value="25">25</option>
@@ -242,7 +231,7 @@ This is an example of the html_select_time function:
 <option value="03">03</option>
 <option value="04">04</option>
 <option value="05">05</option>
-<option value="06" selected="selected">06</option>
+<option value="06">06</option>
 <option value="07">07</option>
 <option value="08">08</option>
 <option value="09">09</option>
@@ -286,7 +275,7 @@ This is an example of the html_select_time function:
 <option value="47">47</option>
 <option value="48">48</option>
 <option value="49">49</option>
-<option value="50">50</option>
+<option value="50" selected="selected">50</option>
 <option value="51">51</option>
 <option value="52">52</option>
 <option value="53">53</option>

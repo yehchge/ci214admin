@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+.bbs tbody{font-size:15px;}
+.bbs tbody tr{height:30px;}
+.bbs tbody tr td{vertical-align:middle;}
+.bbs_con{color:#000;}
+.bbs_con h2{height:30px;line-height:30px;white-space: nowrap;overflow:hidden;text-overflow:ellipsis;font-size:1.3em;color:#002051;}
+.bbs_con:hover h2{color:#000;text-decoration:underline;}
+.box_con2 h2{font-size:1.4em;font-weight:bold;}
+.willgoing{padding:2px;font-size:12px;color:#af0029;border:#af0029 1px solid;font-weight:bold;}
+.nogoing{padding:2px;font-size:12px;color:#428500;border:#428500 1px solid;font-weight:bold;}
+.a_hover{color:#002051;}
+.a_hover:hover{color:#000;text-decoration:underline;}
+.a_color_blue{color:#0065c3;}
+.a_color_blue:hover{color:#da6100;text-decoration:underline;}
+.sort_color_light{color:#d1eadf;text-decoration:underline;}
+.sort_color_light:hover{color:#ffdfc6;text-decoration:none;}
+
+.sort_color_light2{color:#d1eadf;}
+.sort_color_light2:hover{color:#ffdfc6;}
+
+.bbs_hiddentd{font-size:12px;font-weight:bold;}
+.menu span{padding:0 15px;font-size:15px;font-weight:bold;}
+ .tab{} 
+ .tab .tab_inner{padding:8px 14px 6px;height:20px;line-height:20px;color:#666;letter-spacing:1px;} 
+ .tab:hover .tab_inner{background:#f6d012;color:#000;}
+ .tab .active{height:20px;line-height:20px;padding:8px 14px 6px;background:#f6d012;font-size:200%;color:#000;letter-spacing:1px;} 
+
+.yellow{background-color:#f6d012;}
+.go_top{font-size:1.2em;font-weight:bold;text-align:center;padding:3px 7px;background:#fff;color:#111;cursor:pointer;border:#bbb 1px solid;}
+.go_top:hover{font-size:1.2em;font-weight:bold;text-align:center;padding:3px 7px;background:#444;color:#eee;}
+
+
+
+
+
+/* DoubleClick Edit CSS Begin */
+table.data thead tr{background-color:#333;color:#fff;font-size:110%;font-weight:bold;}
+
+
+table.data tr.even td.cell {background-color: #EED;}
+table.data tr.odd td.cell {background-color: #FFE;}
+table.data tr.even td.cell:hover { background-color:#EEC; }
+table.data tr.odd td.cell:hover { background-color:#FFB; }
+td.cell-editor { background-color: #ddffdd; }
+td.cell-editor input { width: 90%; border: 0px none black; background-color: #ddffdd; }
+/* DoubleClick Edit CSS End */
+
+.label {font-size: 12px;color: #930;font-weight: bold;text-align: right;}
+
+.ch,.rh { background-color: #dddddd; }
+table.data tr.even { background-color:#EEE; }
+table.data tr.odd { background-color:white; }
+table.data tr.even:hover { background-color:#dbf4ff; text-decoration:none;}
+table.data tr.odd:hover { background-color:#dbf4ff; text-decoration:none; }
+table.data td { padding:5px;cursor:default; }
+
+table.data th.sortable a:active,
+table.data th.sortable-asc a:active,
+table.data th.sortable-desc a:active {
+	color: #333;
+	text-decoration:none;
+}
+
+table.data th.sortable a:visited,
+table.data th.sortable-asc a:visited,
+table.data th.sortable-desc a:visited {
+	cursor: pointer;
+	padding-right: 16px;
+	text-decoration:none;
+	/* background: #ddd url(/images/admin/TW/bg_sortable2.gif) right top no-repeat; */
+}
+
+table.data th.sortable a:link,
+table.data th.sortable-asc a:link,
+table.data th.sortable-desc a:link {
+	cursor: pointer;
+	padding-right: 16px;
+	text-decoration:none;
+	/* background: #ddd url(/images/admin/TW/bg_sortable2.gif) right top no-repeat; */
+}
+
+table.data th.sortable:hover,
+table.data th.sortable-asc:hover,
+table.data th.sortable-desc:hover {
+	color: #495885;
+	/* background-color: #D4FFFF; */
+	text-decoration:underline;
+}
+table.data th.sortable-asc {
+	/* background: #D3E0E8 url(/images/admin/TW/bg_sortable2.gif) right -40px no-repeat; */
+	color: #495885;
+	text-decoration: none;
+}
+table.data th.sortable-desc {
+	/* background: #D3E0E8 url(/images/admin/TW/bg_sortable2.gif) right -80px no-repeat; */
+	color: #495885;
+	text-decoration: none;
+}
+
+#breadCrumb{font-size: 1.4em;color:#000;}
+#breadCrumb a
+{
+	color: #0e82c7;
+	text-decoration: none;
+	font-weight: inherit;
+}
+
+#breadCrumb a:hover
+{
+	text-decoration: underline;
+}
+
+.qaclose{width:24px;height:24px;background:url(/images/user/TW/close.png) 0px 0px;display:block;}
+.qaclose:hover{background-position:0px -31px;}
