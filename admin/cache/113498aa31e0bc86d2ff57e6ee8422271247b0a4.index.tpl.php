@@ -1,33 +1,44 @@
-<?php /*%%SmartyHeaderCode:19873535ca838362c65-05747285%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20817535e264fa0fc59-40552499%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '113498aa31e0bc86d2ff57e6ee8422271247b0a4' => 
     array (
       0 => '.\\views\\index.tpl',
-      1 => 1398581645,
+      1 => 1398648492,
       2 => 'file',
     ),
     '0f0bdf8a34883c52651317ab81d3218bef3569ac' => 
     array (
       0 => '.\\views\\header.tpl',
-      1 => 1396841534,
+      1 => 1398648492,
       2 => 'file',
     ),
     'd5c551f27886c3e50e465de0c236d97c8b76fad0' => 
     array (
       0 => '.\\views\\footer.tpl',
-      1 => 1396841534,
+      1 => 1398648492,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19873535ca838362c65-05747285',
-  'cache_lifetime' => 120,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_535caa3b4ad613_34076045',
+  'nocache_hash' => '20817535e264fa0fc59-40552499',
+  'variables' => 
+  array (
+    'SCRIPT_NAME' => 0,
+    'Name' => 1,
+    'FirstName' => 0,
+    'LastName' => 0,
+    'contacts' => 0,
+    'option_values' => 0,
+    'option_selected' => 0,
+    'option_output' => 0,
+  ),
   'has_nocache_code' => true,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_535e264fe60517_02059827',
+  'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_535caa3b4ad613_34076045')) {function content_535caa3b4ad613_34076045($_smarty_tpl) {?><HTML>
+<?php if ($_valid && !is_callable('content_535e264fe60517_02059827')) {function content_535e264fe60517_02059827($_smarty_tpl) {?><HTML>
 <HEAD>
 <TITLE>foo - <?php echo $_smarty_tpl->tpl_vars['Name']->value;?>
 </TITLE>
@@ -41,7 +52,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 Title: 
 
-The current date and time is 2014-04-27 08:56:59
+The current date and time is 2014-04-28 11:58:39
 
 The value of global assigned variable $SCRIPT_NAME is /ci214admin/admin/index.php
 
@@ -122,8 +133,8 @@ This is an example of the html_select_date function:
 <option value="24">24</option>
 <option value="25">25</option>
 <option value="26">26</option>
-<option value="27" selected="selected">27</option>
-<option value="28">28</option>
+<option value="27">27</option>
+<option value="28" selected="selected">28</option>
 <option value="29">29</option>
 <option value="30">30</option>
 <option value="31">31</option>
@@ -156,10 +167,10 @@ This is an example of the html_select_time function:
 <option value="05">05</option>
 <option value="06">06</option>
 <option value="07">07</option>
-<option value="08" selected="selected">08</option>
+<option value="08">08</option>
 <option value="09">09</option>
 <option value="10">10</option>
-<option value="11">11</option>
+<option value="11" selected="selected">11</option>
 <option value="12">12</option>
 </select>
 <select name="Time_Minute">
@@ -219,9 +230,9 @@ This is an example of the html_select_time function:
 <option value="53">53</option>
 <option value="54">54</option>
 <option value="55">55</option>
-<option value="56" selected="selected">56</option>
+<option value="56">56</option>
 <option value="57">57</option>
-<option value="58">58</option>
+<option value="58" selected="selected">58</option>
 <option value="59">59</option>
 </select>
 <select name="Time_Second">
@@ -264,7 +275,7 @@ This is an example of the html_select_time function:
 <option value="36">36</option>
 <option value="37">37</option>
 <option value="38">38</option>
-<option value="39">39</option>
+<option value="39" selected="selected">39</option>
 <option value="40">40</option>
 <option value="41">41</option>
 <option value="42">42</option>
@@ -284,7 +295,7 @@ This is an example of the html_select_time function:
 <option value="56">56</option>
 <option value="57">57</option>
 <option value="58">58</option>
-<option value="59" selected="selected">59</option>
+<option value="59">59</option>
 </select>
 <select name="Time_Meridian">
 <option value="am" selected="selected">AM</option>

@@ -1,23 +1,20 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-04-27 08:54:07
+<?php /* Smarty version Smarty-3.1.18, created on 2014-04-28 11:58:39
          compiled from ".\views\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19873535ca838362c65-05747285%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20817535e264fa0fc59-40552499%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '113498aa31e0bc86d2ff57e6ee8422271247b0a4' => 
     array (
       0 => '.\\views\\index.tpl',
-      1 => 1398581645,
+      1 => 1398648492,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19873535ca838362c65-05747285',
+  'nocache_hash' => '20817535e264fa0fc59-40552499',
   'function' => 
   array (
   ),
-  'cache_lifetime' => 120,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_535ca8386b2da6_78623580',
   'variables' => 
   array (
     'SCRIPT_NAME' => 0,
@@ -30,8 +27,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'option_output' => 0,
   ),
   'has_nocache_code' => true,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_535e264fd150f8_28245892',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_535ca8386b2da6_78623580')) {function content_535ca8386b2da6_78623580($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_capitalize')) include 'C:\\htdocs\\ci214admin\\admin\\third_party\\smarty\\plugins\\modifier.capitalize.php';
+<?php if ($_valid && !is_callable('content_535e264fd150f8_28245892')) {function content_535e264fd150f8_28245892($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_capitalize')) include 'C:\\htdocs\\ci214admin\\admin\\third_party\\smarty\\plugins\\modifier.capitalize.php';
 if (!is_callable('smarty_modifier_date_format')) include 'C:\\htdocs\\ci214admin\\admin\\third_party\\smarty\\plugins\\modifier.date_format.php';
 if (!is_callable('smarty_function_html_select_date')) include 'C:\\htdocs\\ci214admin\\admin\\third_party\\smarty\\plugins\\function.html_select_date.php';
 if (!is_callable('smarty_function_html_select_time')) include 'C:\\htdocs\\ci214admin\\admin\\third_party\\smarty\\plugins\\function.html_select_time.php';
@@ -57,14 +56,14 @@ The value of global assigned variable $SCRIPT_NAME is <?php echo $_smarty_tpl->t
 Example of accessing server environment variable SERVER_NAME: <?php echo $_SERVER['SERVER_NAME'];?>
 
 
-The value of {$Name} is <b><?php echo '/*%%SmartyNocache:19873535ca838362c65-05747285%%*/<?php echo $_smarty_tpl->tpl_vars[\'Name\']->value;?>
-/*/%%SmartyNocache:19873535ca838362c65-05747285%%*/';?>
+The value of {$Name} is <b><?php echo '/*%%SmartyNocache:20817535e264fa0fc59-40552499%%*/<?php echo $_smarty_tpl->tpl_vars[\'Name\']->value;?>
+/*/%%SmartyNocache:20817535e264fa0fc59-40552499%%*/';?>
 </b>
 
 variable modifier example of {$Name|upper}
 
-<b><?php echo '/*%%SmartyNocache:19873535ca838362c65-05747285%%*/<?php echo mb_strtoupper($_smarty_tpl->tpl_vars[\'Name\']->value, \'UTF-8\');?>
-/*/%%SmartyNocache:19873535ca838362c65-05747285%%*/';?>
+<b><?php echo '/*%%SmartyNocache:20817535e264fa0fc59-40552499%%*/<?php echo mb_strtoupper($_smarty_tpl->tpl_vars[\'Name\']->value, \'UTF-8\');?>
+/*/%%SmartyNocache:20817535e264fa0fc59-40552499%%*/';?>
 </b>
 
 
