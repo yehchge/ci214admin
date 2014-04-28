@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Dashboard extends CI_Controller {
 
 	// ------------------------------------------------------------------------
 
@@ -16,29 +16,16 @@ class Admin extends CI_Controller {
 		$section = end($this->uri->segment_array());
 		if ($section != 'login' && $section != 'submit'
 				&& $this->mysession->get('user_id') == false
-				&& $this->mysession->get('is_admin') == false
 				) {
-			redirect(site_url('admin/login'));
+			redirect(site_url('dashboard/login'));
 		}
 	}
-
+	
 	// ------------------------------------------------------------------------
 	
 	public function index()
 	{
-		redirect(site_url('admin/login'));
-	}
-
-	// ------------------------------------------------------------------------
-	
-	public function home()
-	{
-		$this->load->model('user_model');
-		$users = $this->user_model->get();
-		
-		$this->load->view('admin/inc/header');
-		$this->load->view('admin/home', array('users' => $users));
-		$this->load->view('admin/inc/footer');
+		redirect(site_url('dashboard/login'));
 	}
 	
 	// ------------------------------------------------------------------------
@@ -46,9 +33,9 @@ class Admin extends CI_Controller {
 	public function login($submit = null)
 	{
 		if ($submit == null) {
-			$this->load->view('admin/inc/header');
-			$this->load->view('admin/login');
-			$this->load->view('admin/inc/footer');
+			$this->load->view('dashboard/inc/header');
+			$this->load->view('dashboard/login');
+			$this->load->view('dashboard/inc/footer');
 			return true;
 		}
 		
@@ -56,43 +43,42 @@ class Admin extends CI_Controller {
 		$password = $this->input->post('password');
 		
 		$this->load->model('user_model');
-		$result = $this->user_model->login('admin', $email, $password);
+		$result = $this->user_model->login('user', $email, $password);
 		
 		if ($result == true) {
 			$this->mysession->set('user_id', 1);
-			$this->mysession->set('is_admin', 1);
-			redirect(site_url('admin/home'));
+			redirect(site_url('dashboard/home'));
 		} else {
-			redirect(site_url('admin/login'));
+			redirect(site_url('dashboard/login'));
 		}
 	}
 	
 	// ------------------------------------------------------------------------
-
+	
+	public function home()
+	{
+		$this->load->view('dashboard/inc/header');
+		$this->load->view('dashboard/home');
+		$this->load->view('dashboard/inc/footer');
+	}
+		
+	// ------------------------------------------------------------------------
+	
+	public function account()
+	{
+		$this->load->view('dashboard/inc/header');
+		$this->load->view('dashboard/account');
+		$this->load->view('dashboard/inc/footer');
+	}
+	
+	// ------------------------------------------------------------------------
+	
 	public function logout()
 	{
 		$this->mysession->destroy();
-		redirect(site_url('admin/login'));
+		redirect(site_url('dashboard/login'));
 	}
 	
 	// ------------------------------------------------------------------------
-
-	public function create_user()
-	{
-		$email = $this->input->post('email');
-		$password = $this->input->post('password');
-
-		$this->load->model('user_model');
-		$this->user_model->create($email, $password);
-	}
-
-	// ------------------------------------------------------------------------
-	
-	public function delete_user($user_id)
-	{
-		$this->load->model('user_model');
-		echo $this->user_model->delete($user_id);
-	}
-	
 	
 }

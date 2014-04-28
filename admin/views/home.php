@@ -1,7 +1,23 @@
-Admin
+About Us | Details | <a href="<?=site_url('dashboard/login')?>">Login</a>
 
-<form action="<?=site_url('admin/create_user') ?>" method="post">
-	Email: <input type="email" name="email" /><br />
-	Password: <input type="password" name="password" /><br />
-	<input type="submit" />
-</form>
+<br/><br/>
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text text text 
+text text text text text text text text text text text text text text text text 
