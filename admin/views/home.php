@@ -1,23 +1,24 @@
-About Us | Details | <a href="<?=site_url('dashboard/login')?>">Login</a>
+<?=$header?>
 
-<br/><br/>
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text 
+<p>
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+</p>
+
+<p>
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+</p>
+
+<p>
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+    Text Text Text Text Text Text Text Text Text Text Text Text Text 
+</p>
+
+<?=$footer?>

@@ -1,13 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Admin extends MY_Controller {
 
 	// ------------------------------------------------------------------------
-
+	
 	public function __construct() 
 	{
 		parent::__construct();
-		
+	
 		// Get the last segment in the URI, and only redirect out of the
 		// protected area if it is NOT the login form
 		$section = $this->uri->segment_array();
@@ -34,11 +34,10 @@ class Admin extends CI_Controller {
 	public function home()
 	{
 		$this->load->model('user_model');
-		$users = $this->user_model->get();
 		
-		$this->load->view('admin/inc/header');
-		$this->load->view('admin/home', array('users' => $users));
-		$this->load->view('admin/inc/footer');
+		$this->data['users'] = $this->user_model->get();
+		
+		$this->load->view('admin/home', $this->data);
 	}
 	
 	// ------------------------------------------------------------------------
@@ -46,9 +45,7 @@ class Admin extends CI_Controller {
 	public function login($submit = null)
 	{
 		if ($submit == null) {
-			$this->load->view('admin/inc/header');
-			$this->load->view('admin/login');
-			$this->load->view('admin/inc/footer');
+			$this->load->view('admin/login', $this->data);
 			return true;
 		}
 		

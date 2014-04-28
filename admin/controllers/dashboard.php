@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Dashboard extends MY_Controller {
 
 	// ------------------------------------------------------------------------
 
@@ -33,9 +33,7 @@ class Dashboard extends CI_Controller {
 	public function login($submit = null)
 	{
 		if ($submit == null) {
-			$this->load->view('dashboard/inc/header');
-			$this->load->view('dashboard/login');
-			$this->load->view('dashboard/inc/footer');
+			$this->load->view('dashboard/login', $this->data);
 			return true;
 		}
 		
@@ -57,18 +55,14 @@ class Dashboard extends CI_Controller {
 	
 	public function home()
 	{
-		$this->load->view('dashboard/inc/header');
-		$this->load->view('dashboard/home');
-		$this->load->view('dashboard/inc/footer');
+		$this->load->view('dashboard/home', $this->data);
 	}
 		
 	// ------------------------------------------------------------------------
 	
 	public function account()
 	{
-		$this->load->view('dashboard/inc/header');
-		$this->load->view('dashboard/account');
-		$this->load->view('dashboard/inc/footer');
+		$this->load->view('dashboard/account', $this->data);
 	}
 	
 	// ------------------------------------------------------------------------
