@@ -7,3 +7,6 @@ application/cache/*
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
+
+admin/views/tpl_c/*
+!admin/views/tpl_c/.htaccess
