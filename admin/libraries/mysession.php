@@ -24,6 +24,7 @@ define("_SESSION_DB",	'codeigniter_214');
 define("_SESSION_HOST", 'localhost');
 define("_SESSION_USER", 'bill');
 define("_SESSION_PASS", 'bill098');
+define("_SESSION_DOMAIN", '');
 
 //date_default_timezone_set("Asia/Taipei");
 class CI_Mysession {
