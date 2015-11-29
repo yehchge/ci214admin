@@ -1,44 +1,33 @@
-<?php /*%%SmartyHeaderCode:8740535e2a6694b019-99076952%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:533753624e56f313f4-66779392%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '113498aa31e0bc86d2ff57e6ee8422271247b0a4' => 
     array (
       0 => '.\\views\\index.tpl',
-      1 => 1398648492,
+      1 => 1398581645,
       2 => 'file',
     ),
     '0f0bdf8a34883c52651317ab81d3218bef3569ac' => 
     array (
       0 => '.\\views\\header.tpl',
-      1 => 1398648492,
+      1 => 1396841534,
       2 => 'file',
     ),
     'd5c551f27886c3e50e465de0c236d97c8b76fad0' => 
     array (
       0 => '.\\views\\footer.tpl',
-      1 => 1398648492,
+      1 => 1396841534,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8740535e2a6694b019-99076952',
-  'variables' => 
-  array (
-    'SCRIPT_NAME' => 0,
-    'Name' => 1,
-    'FirstName' => 0,
-    'LastName' => 0,
-    'contacts' => 0,
-    'option_values' => 0,
-    'option_selected' => 0,
-    'option_output' => 0,
-  ),
-  'has_nocache_code' => true,
+  'nocache_hash' => '533753624e56f313f4-66779392',
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_535e2a66da7f62_70990255',
+  'unifunc' => 'content_565a768e4c7af1_55770268',
+  'has_nocache_code' => true,
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_535e2a66da7f62_70990255')) {function content_535e2a66da7f62_70990255($_smarty_tpl) {?><HTML>
+<?php if ($_valid && !is_callable('content_565a768e4c7af1_55770268')) {function content_565a768e4c7af1_55770268($_smarty_tpl) {?><HTML>
 <HEAD>
 <TITLE>foo - <?php echo $_smarty_tpl->tpl_vars['Name']->value;?>
 </TITLE>
@@ -52,7 +41,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 Title: 
 
-The current date and time is 2014-04-28 12:16:06
+The current date and time is 2015-11-29 04:52:46
 
 The value of global assigned variable $SCRIPT_NAME is /ci214admin/admin/index.php
 
@@ -96,14 +85,14 @@ This is an example of the html_select_date function:
 <option value="01">January</option>
 <option value="02">February</option>
 <option value="03">March</option>
-<option value="04" selected="selected">April</option>
+<option value="04">April</option>
 <option value="05">May</option>
 <option value="06">June</option>
 <option value="07">July</option>
 <option value="08">August</option>
 <option value="09">September</option>
 <option value="10">October</option>
-<option value="11">November</option>
+<option value="11" selected="selected">November</option>
 <option value="12">December</option>
 </select>
 <select name="Date_Day">
@@ -134,8 +123,8 @@ This is an example of the html_select_date function:
 <option value="25">25</option>
 <option value="26">26</option>
 <option value="27">27</option>
-<option value="28" selected="selected">28</option>
-<option value="29">29</option>
+<option value="28">28</option>
+<option value="29" selected="selected">29</option>
 <option value="30">30</option>
 <option value="31">31</option>
 </select>
@@ -163,7 +152,7 @@ This is an example of the html_select_time function:
 <option value="01">01</option>
 <option value="02">02</option>
 <option value="03">03</option>
-<option value="04">04</option>
+<option value="04" selected="selected">04</option>
 <option value="05">05</option>
 <option value="06">06</option>
 <option value="07">07</option>
@@ -171,7 +160,7 @@ This is an example of the html_select_time function:
 <option value="09">09</option>
 <option value="10">10</option>
 <option value="11">11</option>
-<option value="12" selected="selected">12</option>
+<option value="12">12</option>
 </select>
 <select name="Time_Minute">
 <option value="00">00</option>
@@ -181,68 +170,6 @@ This is an example of the html_select_time function:
 <option value="04">04</option>
 <option value="05">05</option>
 <option value="06">06</option>
-<option value="07">07</option>
-<option value="08">08</option>
-<option value="09">09</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16" selected="selected">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-<option value="32">32</option>
-<option value="33">33</option>
-<option value="34">34</option>
-<option value="35">35</option>
-<option value="36">36</option>
-<option value="37">37</option>
-<option value="38">38</option>
-<option value="39">39</option>
-<option value="40">40</option>
-<option value="41">41</option>
-<option value="42">42</option>
-<option value="43">43</option>
-<option value="44">44</option>
-<option value="45">45</option>
-<option value="46">46</option>
-<option value="47">47</option>
-<option value="48">48</option>
-<option value="49">49</option>
-<option value="50">50</option>
-<option value="51">51</option>
-<option value="52">52</option>
-<option value="53">53</option>
-<option value="54">54</option>
-<option value="55">55</option>
-<option value="56">56</option>
-<option value="57">57</option>
-<option value="58">58</option>
-<option value="59">59</option>
-</select>
-<select name="Time_Second">
-<option value="00">00</option>
-<option value="01">01</option>
-<option value="02">02</option>
-<option value="03">03</option>
-<option value="04">04</option>
-<option value="05">05</option>
-<option value="06" selected="selected">06</option>
 <option value="07">07</option>
 <option value="08">08</option>
 <option value="09">09</option>
@@ -288,6 +215,68 @@ This is an example of the html_select_time function:
 <option value="49">49</option>
 <option value="50">50</option>
 <option value="51">51</option>
+<option value="52" selected="selected">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+</select>
+<select name="Time_Second">
+<option value="00">00</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46" selected="selected">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
 <option value="52">52</option>
 <option value="53">53</option>
 <option value="54">54</option>
@@ -298,8 +287,8 @@ This is an example of the html_select_time function:
 <option value="59">59</option>
 </select>
 <select name="Time_Meridian">
-<option value="am">AM</option>
-<option value="pm" selected="selected">PM</option>
+<option value="am" selected="selected">AM</option>
+<option value="pm">PM</option>
 </select>
 </form>
 
